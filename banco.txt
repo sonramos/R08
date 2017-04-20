@@ -1,0 +1,200 @@
+\\iconta.h
+
+#ifndef ICONTA_H
+#define ICONTA_H
+
+
+class Iconta
+{
+    public:
+        Iconta();
+        virtual ~Iconta();
+        void sacar(double valor){
+
+
+        }
+        void depositar(double valor){
+        }
+
+#endif // ICONTA_H
+
+
+\\iconta.cpp
+
+#include "Iconta.h"
+
+Iconta::Iconta()
+{
+    //ctor
+}
+
+Iconta::~Iconta()
+{
+    //dtor
+}
+
+
+\\conta.h
+
+#ifndef CONTA_H
+#define CONTA_H
+
+
+class Conta
+{
+    public:
+        Conta();
+        virtual ~Conta();
+        std::string nomeCliente;
+        int numeroConta;
+        float saldo;
+        float limite;
+    private:
+          float defineLimite(limite);
+
+
+};
+
+#endif // CONTA_H
+
+
+\\conta.cpp
+
+#include "Conta.h"
+
+Conta::Conta()
+{
+          void getNomeClinte(std::string nc){
+
+            nomeCliente = nc;
+          }
+          std::string setNomeCliente(){
+            return nomeCliente;
+          }
+          void salarioMensal(float sm){
+            salarioMensal = sm;
+          }
+          float salarioMensal(){
+            return salarioMensal;
+          }
+          void getNumeroConta(int c){
+            numeroConta = c;
+          }
+          int  setNumeroConta(){
+            return numeroConta;
+          }
+          void getSaldo(float s){
+            saldo = s;
+          }
+          float setSaldo(){
+            return saldo;
+          }
+
+}
+Conta::defineLimite(salarioMensal){
+    float limite;
+    limite = 2*salarioMensal;
+
+
+
+}
+Conta::~Conta()
+{
+    //dtor
+}
+
+
+\\contaEspecial.h
+
+
+#ifndef CONTAESPECIAL_H
+#define CONTAESPECIAL_H
+#include "conta.h"
+
+
+class ContaEspecial
+{
+    public:
+        ContaEspecial();
+        virtual ~ContaEspecial();
+    protected:
+    private:
+};
+
+#endif // CONTAESPECIAL_H
+
+
+
+\\contaEspecial.cpp
+
+
+#include "ContaEspecial.h"
+#include "conta.h"
+
+ContaEspecial::ContaEspecial()
+{
+
+}
+
+ContaEspecial::~ContaEspecial()
+{
+    //dtor
+}
+
+ContaEspecial::DefineLimite(salarioMensal){
+
+    float limite;
+    limite = 3*salarioMensal;
+
+}
+
+
+\\ main.cpp
+
+
+#include "Iconta.h"
+#include "Conta.h"
+#include "ContaEspecial.h"
+#include <iostreeam>
+using namespace std;
+int main(){
+    int numc;
+    int sam;
+    string nom;
+    Conta c1;
+    ContaEspecial c2;
+    cout<< "Digite seu nome"<<endl;
+    cin>>nom;
+    setNomeCliente(nom){
+        nom = nomeCliente;
+    }
+    cout<<"Cliente: "<<getNomeCliente();
+    cout<<"Digite o numero da conta: "<<endl;
+    cin>>numc;
+    setNumeroConta(int numc){
+        numc = numeroConta;
+    }
+    count<<"Numero da sua conta: "<<getNumeroConta()<<endl;
+    cout<<"Digite o seu salario mensal: "<<endl;
+    cint>> sam;
+    cout<<" O seu salario mensal e : "<<getSalarioMensal()<<endl;
+    cout<<"Digite se sua conta e especial ou normal"<<endl;
+    cin>>conta>>endl;
+    if(conta==especia){
+        c1.sacar();
+        c1.depositar();
+        c1.definirLimite();
+    }
+
+    else(conta==simples) {
+
+        c2.sacar();
+        c2.depositar();
+        c2.definirLimite();
+
+
+    }
+
+
+return 0;
+}

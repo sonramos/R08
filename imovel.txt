@@ -1,0 +1,240 @@
+\\imovel.h
+
+#ifndef IMOVEL_H
+#define IMOVEL_H
+#include<iostream>
+using namespace std;
+class imovel
+{
+	
+	string endereco;
+	public:
+		getEndereco();
+		virtual void getDescricao()=0;
+	protected:
+};
+
+#endif
+
+
+\\imovel.cpp
+
+#include "imovel.h"
+#include "iostream"
+using namespace std;
+
+imovel :: string getEndereco(){
+	
+	
+	
+}  
+
+
+\\terreno.h
+
+
+#ifndef TERRENO_H
+#define TERRENO_H
+
+class terreno : public imovel
+{
+	public:
+		double area;
+		
+	protected:
+};
+
+#endif
+
+
+
+\\terreno.cpp
+
+#include "terreno.h"
+
+
+
+\\casa.h
+
+#ifndef CASA_H
+#define CASA_H
+#include<iostream>
+class casa : public imovel
+{
+	public:
+		int numeroDePavimentos;
+		int quantidadeDeQuartos;
+		double areaDoTerreno;
+		double areaConstruida;		
+	private:
+		setNumeroDePavimentos(int n);
+		int getNumeroDePavimentos();
+		setQuantidadeDeQuartos(int q);
+		int getQuantidadeDeQuartos();
+		setAreaDoTerreno(double at);
+		double getAreaDoTerreno();
+		setAreaConstruida(double ac);
+		double areaConstruida();
+};
+
+#endif
+
+
+\\casa.cpp
+
+
+#include "casa.h"
+#include "iostream"
+using namespace std;
+
+casa::setNumeroDePavimentos(int n){	
+	n=numeroDePavimentos
+}
+casa::int getNumeroDePavimentos(){
+	return numeroDePavimentos;
+}
+casa::setQuantidadeDePavimentos(int q){
+	q=quantidadeDePavimentos;
+}
+casa::int getQuantidadeDePavimentos(){
+	return quantidadeDePavimentos;
+}
+casa::setAreaDoTerreno(double at){
+	at=areaDoTerreno;
+}
+casa::double getAreaDoTerreno(){
+	return areaDoTerreno;
+}
+casa::setAreaConstruida(ac){
+	ac=areaConstruida;
+}
+casa::double getAreaConstruida(){
+	return areaConstruida;
+}
+
+
+\\apartamento.h
+
+
+#ifndef APARTAMENTO_H
+#define APARTAMENTO_H
+#include<iostream>
+using namespace std;
+class apartamento : public imovel
+{
+	public:
+		string posicao;
+		double valorDoCondominio;
+		int numeroDeVagasNaGaragem;
+		
+	private:
+		void setPosicao(string p);
+		string getPosicao();
+		void setValorDoCondominio(double co);
+		double valorDoCondominio();
+		void setNumeroDeVagasNaGaragem(int v);
+		double getNumero
+};
+
+#endif
+
+
+\\apartamento.cpp
+
+
+#include "apartamento.h"
+
+
+\\endereco.h
+
+
+#ifndef ENDERECO_H
+#define ENDERECO_H
+
+class endereco
+{
+	private:
+		string getLogradouro();
+		string getBairro();
+		int getNumero();
+		string getCidade();
+		string getCep();
+		
+		
+		
+	protected:
+};
+
+#endif
+
+
+\\endereco.cpp
+
+#include "endereco.h"
+#include<iostream>
+using namespace std;
+
+endereco::string getLogradouro(){
+string lo;
+lo= Jose Gomes;
+return lo;
+	
+}
+endereco::string getBairro(){
+	string ba;
+	ba=bancarios;
+	return ba;
+}
+endereco::int getNumero(){
+	int nu;
+	nu=28;
+	return nu;
+}
+endereco::string getCidade(){
+	string c;
+	c= joao pessoa;
+	return c;
+}
+endereco::string getCep(){
+	string ce;
+	ce=58052215
+	return ce;
+}
+
+
+\\main.cpp
+
+
+
+#include <iostream>
+#include<imovel.h>
+#include<terreno.h>
+#include<casa.h>
+#include<apartamento.h>
+#include<endereco.h>
+using namespace std;
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	
+	Imovel Imoveis[4];
+	
+	Imoveis[0] = casa1;	
+	Imoveis[1] = casa2;
+	Imoveis[2] = terreno1;
+	Imoveis[3] = terreno2;
+	Imoveis[4] = apartamento;
+	
+	casa1.getDescricao();
+	casa2.getDescricao();
+	terreno1.getDescricao();
+	terreno2.getDescricao();
+	apartamento.getDescricao();
+	
+	
+	
+	
+	
+	return 0;
+}
